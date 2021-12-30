@@ -1,0 +1,20 @@
+{
+  "name": "tabbijoanna_3_29122021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "sass": "sass --watch ./sass/main.scss:.public/css/style.css",
+      "start": "sass ./sass/main.scss:.public/css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoannaTabbi/TabbiJoanna_3_29122021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoannaTabbi/TabbiJoanna_3_29122021/issues"
+  },
+  "homepage": "https://github.com/JoannaTabbi/TabbiJoanna_3_29122021#readme"
+}
