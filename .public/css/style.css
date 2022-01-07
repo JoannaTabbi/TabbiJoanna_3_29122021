@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 html {
   /* Set border-box as the global default */
   box-sizing: border-box;
@@ -75,8 +75,9 @@ body {
 }
 
 h1, h2 {
-  font-size: 1.35rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.7rem;
 }
 
 h3 {
@@ -86,6 +87,7 @@ h3 {
 
 p {
   font-weight: 300;
+  line-height: 1.25rem;
 }
 
 a {
@@ -93,14 +95,28 @@ a {
   text-decoration: none;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  color: #fff;
+  font-weight: 400;
+  padding: 0 20px;
+  border-radius: 25px;
+  box-shadow: 0 5px 5px #c3c3c3;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 header {
   display: flex;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  height: 55px;
+  height: 65px;
 }
 header img {
   width: 168px;
@@ -121,7 +137,6 @@ footer {
 footer nav {
   display: flex;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   flex-direction: column;
 }
@@ -141,6 +156,49 @@ footer li {
 }
 footer a {
   color: inherit;
+}
+
+#find-us {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #eaeaea;
+  color: #353535;
+  box-shadow: inset 0 3px 3px #b7b7b7;
+}
+#find-us p {
+  font-weight: 500;
+}
+#find-us p i {
+  padding-right: 15px;
+}
+#find-us::after {
+  content: "";
+  width: 30px;
+}
+
+#about-us {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding: 40px 0;
+}
+#about-us h1 {
+  width: 60%;
+  text-align: center;
+}
+#about-us p {
+  width: 80%;
+  text-align: center;
+  color: #353535;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

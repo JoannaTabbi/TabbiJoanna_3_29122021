@@ -1,0 +1,13 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-image: linear-gradient($secondary-color, $primary-color);
+    color: $white;
+    font-weight: 400; 
+    padding: 0 20px;
+    border-radius: 25px;
+    box-shadow: 0 5px 5px darken($bg-color, 20%);
+    @include margin-top-bottom(20px);
+}

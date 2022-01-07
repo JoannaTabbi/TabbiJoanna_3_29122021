@@ -2,7 +2,7 @@ header {
     @include major-sections-centered-layout;
     justify-content: center;
     align-items: center;
-    height: 55px;
+    height: 65px;
     img {
         @include size(168px, auto);
     }
