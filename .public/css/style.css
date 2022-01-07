@@ -93,4 +93,18 @@ a {
   text-decoration: none;
 }
 
+header {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+}
+header img {
+  width: 168px;
+  height: auto;
+}
+
 /*# sourceMappingURL=style.css.map */

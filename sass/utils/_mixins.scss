@@ -1,0 +1,10 @@
+@mixin major-sections-centered-layout {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}

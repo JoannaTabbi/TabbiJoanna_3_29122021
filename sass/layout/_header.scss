@@ -1,0 +1,9 @@
+header {
+    @include major-sections-centered-layout;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    img {
+        @include size(168px, auto);
+    }
+}
