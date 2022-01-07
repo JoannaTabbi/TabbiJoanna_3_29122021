@@ -8,3 +8,6 @@ html {
     /* Allow each element to override */
     box-sizing: inherit;
   }
+  body {
+      overflow-x: hidden;
+  }
