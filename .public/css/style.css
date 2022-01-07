@@ -107,4 +107,40 @@ header img {
   height: auto;
 }
 
+footer {
+  display: flex;
+  padding: 15px 25px 25px;
+  background-color: #353535;
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    justify-content: center;
+  }
+}
+footer nav {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  footer nav {
+    width: unset;
+  }
+}
+footer h3 {
+  font-family: Shrikhand, "Cooper Black Italic", cursive;
+  margin-top: 0.67rem;
+  margin-bottom: 0.67rem;
+}
+footer li {
+  margin-top: 0.67rem;
+  margin-bottom: 0.67rem;
+}
+footer a {
+  color: inherit;
+}
+
 /*# sourceMappingURL=style.css.map */

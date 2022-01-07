@@ -8,3 +8,7 @@
     width: $width;
     height: $height;
 }
+@mixin margin-top-bottom($margin-top, $margin-bottom: $margin-top) {
+    margin-top: $margin-top;
+    margin-bottom: $margin-bottom;
+}
