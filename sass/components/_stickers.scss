@@ -1,0 +1,11 @@
+.sticker {
+    position: absolute;
+    top: 13px;
+    right: 11px;
+    z-index: 1;
+    padding: 10px 13px;
+    background-color: $tertiary-color;
+    color: darken($tertiary-color, 40%);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
