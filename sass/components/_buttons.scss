@@ -8,6 +8,6 @@
     font-weight: 400; 
     padding: 0 20px;
     border-radius: 25px;
-    box-shadow: 0 5px 5px darken($bg-color, 20%);
+    box-shadow: $btn-shadow;
     @include margin-top-bottom(20px);
 }

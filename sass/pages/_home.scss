@@ -1,7 +1,6 @@
 #find-us {
     @include major-sections-centered-layout;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     height: 50px;
     background-color: $bg-find-us;
     color: $bg-footer;
@@ -33,5 +32,25 @@
         text-align: center;
         color: $bg-footer;
         @include margin-top-bottom(10px);
+    }
+}
+#how-to {
+    @include major-sections-centered-layout;
+    @include margin-top-bottom(50px);
+    padding: 0 20px;
+    flex-direction: column;
+    h2 {
+        margin-bottom: 20px;
+    }
+    ol {
+        display: flex;
+        flex-flow: row wrap;
+        counter-reset: label-counter;
+    }
+    li {
+        @media screen and (min-width: $bkp-tablet) {
+            width: unset;
+            justify-content: space-between;
+        }
     }
 }

@@ -11,3 +11,7 @@
     margin-top: $margin-top;
     margin-bottom: $margin-bottom;
 }
+@mixin flex-center {
+    justify-content: center;
+    align-items: center;
+}
