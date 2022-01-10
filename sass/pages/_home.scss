@@ -36,10 +36,12 @@
 }
 #how-to {
     @include major-sections-centered-layout;
+    max-width: 1200px;
     padding: 50px 20px;
     flex-direction: column;
     h2 {
         margin-bottom: 20px;
+        margin-right: 20px;
     }
     ol {
         display: flex;
@@ -47,6 +49,7 @@
         counter-reset: label-counter;
     }
     li {
+        max-width: 350px;
         @media screen and (min-width: $bkp-tablet) {
             width: unset;
             justify-content: space-between;
@@ -55,15 +58,17 @@
 }
 #restaurants {
     @include major-sections-centered-layout;
+    max-width: 1200px;
     flex-flow: row wrap;
     justify-content: space-between;
     padding: 40px 20px;
     background-color: $bg-color;
+    @media screen and (min-width: $bkp-desktop-max) {
+        background-color: unset;
+    }
     h2 {
         width: 100%;
         @include margin-top-bottom(10px);
-        @media screen and (min-width: $bkp-tablet) {
-        }
     }
     article {
         @include margin-top-bottom(10px);

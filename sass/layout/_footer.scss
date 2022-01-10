@@ -10,24 +10,27 @@ footer {
         @include major-sections-centered-layout;
         flex-direction: column;
         @media screen and (min-width: $bkp-tablet) {
-            width: unset;
-        }
+            align-items: center;
+        }    
         h3 {
             font-family: $font-stack-headings;
-            @include margin-top-bottom(0.67rem); 
-         }
-         li {
+            @include margin-top-bottom(0.67rem);        
+        }
+        li {
             @include margin-top-bottom(0.67rem);
             &:last-child, &:nth-child(3) {
               font-weight: 300;
             }
-         }
-         a {
+            @media screen and (min-width: $bkp-tablet) {
+                text-align: center;
+            }    
+        }
+        a {
              color: inherit;
          }
-         i {
+        i {
              font-size: 0.8rem;
              margin-right: 10px;
-         }
+        }
     }
 }

@@ -15,6 +15,11 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -215,7 +220,7 @@ footer nav {
 }
 @media screen and (min-width: 768px) {
   footer nav {
-    width: unset;
+    align-items: center;
   }
 }
 footer nav h3 {
@@ -229,6 +234,11 @@ footer nav li {
 }
 footer nav li:last-child, footer nav li:nth-child(3) {
   font-weight: 300;
+}
+@media screen and (min-width: 768px) {
+  footer nav li {
+    text-align: center;
+  }
 }
 footer nav a {
   color: inherit;
@@ -285,16 +295,21 @@ footer nav i {
   display: flex;
   width: 100%;
   margin: 0 auto;
+  max-width: 1200px;
   padding: 50px 20px;
   flex-direction: column;
 }
 #how-to h2 {
   margin-bottom: 20px;
+  margin-right: 20px;
 }
 #how-to ol {
   display: flex;
   flex-flow: row wrap;
   counter-reset: label-counter;
+}
+#how-to li {
+  max-width: 350px;
 }
 @media screen and (min-width: 768px) {
   #how-to li {
@@ -307,10 +322,16 @@ footer nav i {
   display: flex;
   width: 100%;
   margin: 0 auto;
+  max-width: 1200px;
   flex-flow: row wrap;
   justify-content: space-between;
   padding: 40px 20px;
   background-color: #f6f6f6;
+}
+@media screen and (min-width: 1200px) {
+  #restaurants {
+    background-color: unset;
+  }
 }
 #restaurants h2 {
   width: 100%;
