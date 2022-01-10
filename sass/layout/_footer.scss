@@ -12,16 +12,22 @@ footer {
         @media screen and (min-width: $bkp-tablet) {
             width: unset;
         }
+        h3 {
+            font-family: $font-stack-headings;
+            @include margin-top-bottom(0.67rem); 
+         }
+         li {
+            @include margin-top-bottom(0.67rem);
+            &:last-child, &:nth-child(3) {
+              font-weight: 300;
+            }
+         }
+         a {
+             color: inherit;
+         }
+         i {
+             font-size: 0.8rem;
+             margin-right: 10px;
+         }
     }
-    h3 {
-       font-family: $font-stack-headings;
-       @include margin-top-bottom(0.67rem); 
-    }
-    li {
-       @include margin-top-bottom(0.67rem);
-    }
-    a {
-        color: inherit;
-    }
-    
 }

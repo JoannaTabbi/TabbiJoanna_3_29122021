@@ -11,6 +11,7 @@
     padding-right: 35px;
     box-shadow: $main-shadow;
     font-weight: 500;
+    cursor: pointer;
     counter-increment: label-counter;
     &::before {
         content: counter(label-counter);
