@@ -3,13 +3,13 @@ footer {
     padding: 15px 20px 20px;
     background-color: $bg-footer;
     color: $white;
-        @media screen and (min-width: $bkp-tablet) {
-            justify-content: center;
-        }
+    @include media-queries-min-width($bkp-tablet) {
+        justify-content: center;
+    }
     nav {
-        @include major-sections-centered-layout;
         flex-direction: column;
-        @media screen and (min-width: $bkp-tablet) {
+        @include major-sections-centered-layout;
+        @include media-queries-min-width($bkp-tablet) {
             align-items: center;
         }    
         h3 {
@@ -21,7 +21,7 @@ footer {
             &:last-child, &:nth-child(3) {
               font-weight: 300;
             }
-            @media screen and (min-width: $bkp-tablet) {
+            @include media-queries-min-width($bkp-tablet) {
                 text-align: center;
             }    
         }

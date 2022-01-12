@@ -36,9 +36,9 @@
 }
 #how-to {
     @include major-sections-centered-layout;
+    flex-direction: column;
     max-width: 1200px;
     padding: 50px 20px;
-    flex-direction: column;
     h2 {
         margin-bottom: 20px;
         margin-right: 20px;
@@ -50,20 +50,20 @@
     }
     li {
         max-width: 350px;
-        @media screen and (min-width: $bkp-tablet) {
-            width: unset;
+        @include media-queries-min-width($bkp-tablet) {
             justify-content: space-between;
+            width: unset;
         }
     }
 }
 #restaurants {
     @include major-sections-centered-layout;
-    max-width: 1200px;
     flex-flow: row wrap;
     justify-content: space-between;
+    max-width: 1200px;
     padding: 40px 20px;
     background-color: $bg-color;
-    @media screen and (min-width: $bkp-desktop-max) {
+    @include media-queries-min-width($bkp-desktop-max) {
         background-color: unset;
     }
     h2 {
@@ -71,10 +71,10 @@
         @include margin-top-bottom(10px);
     }
     article {
-        @include margin-top-bottom(10px);
         position: relative;
         width: 100%;
-        @media screen and (min-width: $bkp-tablet) {
+        @include margin-top-bottom(10px);
+        @include media-queries-min-width($bkp-tablet) {
             width: 48%;
             
         }
@@ -96,8 +96,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 25px 0 15px;
             height: 77px;
+            padding: 0 25px 0 15px;
         }
         p {
             @include margin-top-bottom(0.3rem);

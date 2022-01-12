@@ -1,7 +1,6 @@
 .btn {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     height: 50px;
     background-image: linear-gradient($secondary-color, $primary-color);
     color: $white;

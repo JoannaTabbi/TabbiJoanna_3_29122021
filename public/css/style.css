@@ -213,10 +213,10 @@ footer {
   }
 }
 footer nav {
+  flex-direction: column;
   display: flex;
   width: 100%;
   margin: 0 auto;
-  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   footer nav {
@@ -295,9 +295,9 @@ footer nav i {
   display: flex;
   width: 100%;
   margin: 0 auto;
+  flex-direction: column;
   max-width: 1200px;
   padding: 50px 20px;
-  flex-direction: column;
 }
 #how-to h2 {
   margin-bottom: 20px;
@@ -313,8 +313,8 @@ footer nav i {
 }
 @media screen and (min-width: 768px) {
   #how-to li {
-    width: unset;
     justify-content: space-between;
+    width: unset;
   }
 }
 
@@ -322,9 +322,9 @@ footer nav i {
   display: flex;
   width: 100%;
   margin: 0 auto;
-  max-width: 1200px;
   flex-flow: row wrap;
   justify-content: space-between;
+  max-width: 1200px;
   padding: 40px 20px;
   background-color: #f6f6f6;
 }
@@ -339,10 +339,10 @@ footer nav i {
   margin-bottom: 10px;
 }
 #restaurants article {
-  margin-top: 10px;
-  margin-bottom: 10px;
   position: relative;
   width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 768px) {
   #restaurants article {
@@ -367,8 +367,8 @@ footer nav i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 25px 0 15px;
   height: 77px;
+  padding: 0 25px 0 15px;
 }
 #restaurants figure p {
   margin-top: 0.3rem;
