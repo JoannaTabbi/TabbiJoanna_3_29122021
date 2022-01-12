@@ -148,7 +148,6 @@ a {
   padding-right: 35px;
   box-shadow: 5px 5px 10px #dddddd;
   font-weight: 500;
-  cursor: pointer;
   counter-increment: label-counter;
 }
 .label__ht::before {
