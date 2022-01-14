@@ -1,17 +1,8 @@
-html {
-    /* Set border-box as the global default */
-    box-sizing: border-box;
-  }
-  *,
-  *::before,
-  *::after {
-    /* Allow each element to override */
-    box-sizing: inherit;
-  }
-  body {
-      overflow-x: hidden;
-  }
-  main {
-    display: flex;
-    flex-wrap: wrap;
-  }
+/* Set border-box as the global default */
+* {
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+}

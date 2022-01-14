@@ -1,18 +1,7 @@
+/* Set border-box as the global default */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
-html {
-  /* Set border-box as the global default */
+* {
   box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  /* Allow each element to override */
-  box-sizing: inherit;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 main {
@@ -115,16 +104,24 @@ a {
   margin-bottom: 20px;
   transition: all 300ms 200ms ease-out;
 }
+@media screen and (min-width: 992px) {
+  .btn {
+    height: 60px;
+    font-size: 1.125rem;
+    border-radius: 30px;
+    padding: 0 30px;
+  }
+}
 .btn:hover {
   opacity: 0.85;
   box-shadow: 0 7px 7px #b6b6b6;
 }
 
-.fa-heart {
+.heart {
   font-size: 1.5rem;
   color: #353535;
 }
-.fa-heart.fas {
+.heart--plein {
   background: linear-gradient(#9356DC, #FF79DA);
   background-size: 100%;
   background-clip: text;
@@ -134,48 +131,7 @@ a {
   opacity: 0;
 }
 
-.label__ht {
-  display: flex;
-  align-items: center;
-  height: 72px;
-  width: 100%;
-  background-color: #f6f6f6;
-  border-radius: 25px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 12px;
-  margin-right: 20px;
-  padding-right: 35px;
-  box-shadow: 5px 5px 10px #dddddd;
-  font-weight: 500;
-  counter-increment: label-counter;
-}
-.label__ht::before {
-  content: counter(label-counter);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25px;
-  height: 25px;
-  background-color: #9356DC;
-  color: #fff;
-  border-radius: 50%;
-  margin-left: -12px;
-  font-size: 0.8rem;
-}
-.label__ht i {
-  color: #7e7e7e;
-  margin: 0 20px;
-  font-size: 1.125rem;
-}
-.label__ht--active {
-  background-color: #f5edff;
-}
-.label__ht--active i {
-  color: #9356DC;
-}
-
-.sticker {
+.new-sticker {
   position: absolute;
   top: 13px;
   right: 11px;
@@ -183,21 +139,31 @@ a {
   padding: 10px 13px;
   background-color: #99E2D0;
   color: #278870;
+  border-radius: 2px;
   font-size: 0.875rem;
   font-weight: 500;
 }
 
 header {
   display: flex;
-  width: 100%;
-  margin: 0 auto;
   justify-content: center;
   align-items: center;
   height: 65px;
 }
+@media screen and (min-width: 992px) {
+  header {
+    height: 100px;
+  }
+}
 header img {
-  width: 168px;
+  width: 170px;
   height: auto;
+}
+@media screen and (min-width: 992px) {
+  header img {
+    width: 200px;
+    height: auto;
+  }
 }
 
 footer {
@@ -206,20 +172,15 @@ footer {
   background-color: #353535;
   color: #fff;
 }
-@media screen and (min-width: 768px) {
-  footer {
-    justify-content: center;
-  }
-}
 footer nav {
-  flex-direction: column;
   display: flex;
-  width: 100%;
-  margin: 0 auto;
+  flex-direction: column;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   footer nav {
-    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
   }
 }
 footer nav h3 {
@@ -227,36 +188,30 @@ footer nav h3 {
   margin-top: 0.67rem;
   margin-bottom: 0.67rem;
 }
-footer nav li {
+footer nav ul li {
   margin-top: 0.67rem;
   margin-bottom: 0.67rem;
 }
-footer nav li:last-child, footer nav li:nth-child(3) {
+footer nav ul li:last-child, footer nav ul li:nth-child(3) {
   font-weight: 300;
 }
-@media screen and (min-width: 768px) {
-  footer nav li {
-    text-align: center;
-  }
-}
-footer nav a {
+footer nav ul li a {
   color: inherit;
 }
-footer nav i {
+footer nav ul li a i {
   font-size: 0.8rem;
   margin-right: 10px;
 }
 
 #find-us {
   display: flex;
-  width: 100%;
-  margin: 0 auto;
+  flex-basis: 100%;
   justify-content: center;
   align-items: center;
   height: 50px;
   background-color: #eaeaea;
   color: #353535;
-  box-shadow: inset 0 3px 3px #b7b7b7;
+  box-shadow: inset 0 3px 3px #d1d1d1;
 }
 #find-us p {
   font-weight: 500;
@@ -271,16 +226,20 @@ footer nav i {
 
 #about-us {
   display: flex;
-  width: 100%;
-  margin: 0 auto;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   background-color: #f6f6f6;
   padding: 40px 0;
 }
 #about-us h1 {
   width: 60%;
   text-align: center;
+}
+@media screen and (min-width: 992px) {
+  #about-us h1 {
+    font-size: 1.5rem;
+  }
 }
 #about-us p {
   width: 80%;
@@ -289,13 +248,17 @@ footer nav i {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+@media screen and (min-width: 992px) {
+  #about-us p {
+    font-size: 1.25rem;
+  }
+}
 
 #how-to {
-  display: flex;
-  width: 100%;
+  width: 1200px;
   margin: 0 auto;
+  display: flex;
   flex-direction: column;
-  max-width: 1200px;
   padding: 50px 20px;
 }
 #how-to h2 {
@@ -307,29 +270,82 @@ footer nav i {
   flex-flow: row wrap;
   counter-reset: label-counter;
 }
-#how-to li {
-  max-width: 350px;
+@media screen and (min-width: 768px) {
+  #how-to ol {
+    justify-content: center;
+    column-gap: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #how-to ol {
+    justify-content: space-between;
+  }
+}
+#how-to ol li {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  height: 72px;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 12px;
+  padding-right: 20px;
+  box-shadow: 5px 5px 10px #dddddd;
+  font-weight: 500;
+  counter-increment: label-counter;
 }
 @media screen and (min-width: 768px) {
-  #how-to li {
-    justify-content: space-between;
-    width: unset;
+  #how-to ol li {
+    flex-basis: 45%;
   }
+}
+@media screen and (min-width: 992px) {
+  #how-to ol li {
+    flex-basis: 30%;
+    font-size: 1.1rem;
+  }
+}
+#how-to ol li::before {
+  content: counter(label-counter);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  min-width: 25px;
+  background-color: #9356DC;
+  color: #fff;
+  border-radius: 50%;
+  margin-left: -12px;
+  font-size: 0.8rem;
+}
+#how-to ol li i {
+  color: #7e7e7e;
+  margin: 0 20px;
+  font-size: 1.125rem;
+}
+#how-to ol li:hover {
+  background-color: #f5edff;
+}
+#how-to ol li:hover i {
+  color: #9356DC;
 }
 
 #restaurants {
-  display: flex;
-  width: 100%;
+  width: 1200px;
   margin: 0 auto;
+  display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  max-width: 1200px;
   padding: 40px 20px;
   background-color: #f6f6f6;
 }
 @media screen and (min-width: 1200px) {
   #restaurants {
     background-color: unset;
+    padding-top: unset;
   }
 }
 #restaurants h2 {
@@ -348,28 +364,33 @@ footer nav i {
     width: 48%;
   }
 }
-#restaurants figure {
+#restaurants article figure {
   display: flex;
   flex-flow: column wrap;
   background-color: #fff;
   border-radius: 18px;
   box-shadow: 5px 5px 10px #dddddd;
 }
-#restaurants figure img {
+#restaurants article figure img {
   object-fit: cover;
   object-position: 50% 70%;
   width: 100%;
-  height: 174px;
+  height: 175px;
   border-radius: 18px 18px 0 0;
 }
-#restaurants figure figcaption {
+@media screen and (min-width: 992px) {
+  #restaurants article figure img {
+    height: 250px;
+  }
+}
+#restaurants article figure figcaption {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 77px;
   padding: 0 25px 0 15px;
 }
-#restaurants figure p {
+#restaurants article figure figcaption p {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }

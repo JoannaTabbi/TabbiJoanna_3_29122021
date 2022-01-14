@@ -1,107 +1,160 @@
 #find-us {
-    @include major-sections-centered-layout;
-    @include flex-center;
-    height: 50px;
-    background-color: $bg-find-us;
-    color: $bg-footer;
-    box-shadow: inset 0 3px 3px darken($bg-find-us, 20%);
-    p {
-        font-weight: 500;
-        i {
-            padding-right: 15px;
-        }
-
+  display: flex;
+  flex-basis: 100%;
+  @include flex-center;
+  height: 50px;
+  background-color: $fu-grey;
+  color: $darkgrey;
+  box-shadow: inset 0 3px 3px darken($fu-grey, 10%);
+  p {
+    font-weight: 500;
+    i {
+      padding-right: 15px;
     }
-    &::after {
-        content: "";
-        width: 30px;
-    }
+  }
+  &::after {
+    content: "";
+    width: 30px;
+  }
 }
 #about-us {
-    @include major-sections-centered-layout;
-    flex-direction: column;
-    align-items: center;
-    background-color: $bg-color;
-    padding: 40px 0;
-    h1 {
-        width: 60%;
-        text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: $lightgrey;
+  padding: 40px 0;
+  h1 {
+    width: 60%;
+    text-align: center;
+    @include media-queries-min-width($bkp-desktop) {
+      font-size: 1.5rem;
     }
-    p {
-        width: 80%;
-        text-align: center;
-        color: $bg-footer;
-        @include margin-top-bottom(10px);
+  }
+  p {
+    width: 80%;
+    text-align: center;
+    color: $darkgrey;
+    @include margin-top-bottom(10px);
+    @include media-queries-min-width($bkp-desktop) {
+      font-size: 1.25rem;
     }
+  }
 }
 #how-to {
-    @include major-sections-centered-layout;
-    flex-direction: column;
-    max-width: 1200px;
-    padding: 50px 20px;
-    h2 {
-        margin-bottom: 20px;
-        margin-right: 20px;
+  @include max-width(1200px);
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px;
+  h2 {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+  ol {
+    display: flex;
+    flex-flow: row wrap;
+    counter-reset: label-counter;
+    @include media-queries-min-width($bkp-tablet) {
+      justify-content: center;
+      column-gap: 20px;
     }
-    ol {
-        display: flex;
-        flex-flow: row wrap;
-        counter-reset: label-counter;
+    @include media-queries-min-width($bkp-desktop) {
+      justify-content: space-between;
     }
     li {
-        max-width: 350px;
-        @include media-queries-min-width($bkp-tablet) {
-            justify-content: space-between;
-            width: unset;
+      display: flex;
+      flex-basis: 100%;
+      align-items: center;
+      height: 72px;
+      background-color: $lightgrey;
+      border-radius: 25px;
+      @include margin-top-bottom(10px);
+      margin-left: 12px;
+      padding-right: 20px;
+      box-shadow: $main-shadow;
+      font-weight: 500;
+      counter-increment: label-counter;
+      @include media-queries-min-width($bkp-tablet) {
+        flex-basis: 45%;
+      }
+      @include media-queries-min-width($bkp-desktop) {
+        flex-basis: 30%;
+        font-size: 1.1rem;
+      }
+      &::before {
+        content: counter(label-counter);
+        display: flex;
+        @include flex-center;
+        @include size(25px);
+        min-width: 25px;
+        background-color: $primary-color;
+        color: $white;
+        border-radius: 50%;
+        margin-left: -12px;
+        font-size: 0.8rem;
+      }
+      i {
+        color: $ht-icon-grey;
+        margin: 0 20px;
+        font-size: 1.125rem;
+      }
+      &:hover {
+        background-color: $ht-pale-lilac;
+        i {
+          color: $primary-color;
         }
+      }
     }
+  }
 }
 #restaurants {
-    @include major-sections-centered-layout;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    padding: 40px 20px;
-    background-color: $bg-color;
-    @include media-queries-min-width($bkp-desktop-max) {
-        background-color: unset;
-    }
-    h2 {
-        width: 100%;
-        @include margin-top-bottom(10px);
-    }
-    article {
-        position: relative;
-        width: 100%;
-        @include margin-top-bottom(10px);
-        @include media-queries-min-width($bkp-tablet) {
-            width: 48%;
-            
-        }
+  @include max-width($bkp-desktop-max);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: $lightgrey;
+  @include media-queries-min-width($bkp-desktop-max) {
+    background-color: unset;
+    padding-top: unset;
+  }
+  h2 {
+    width: 100%;
+    @include margin-top-bottom(10px);
+  }
+  article {
+    position: relative;
+    width: 100%;
+    @include margin-top-bottom(10px);
+    @include media-queries-min-width($bkp-tablet) {
+      width: 48%;
     }
     figure {
+      display: flex;
+      flex-flow: column wrap;
+      background-color: $white;
+      border-radius: 18px;
+      box-shadow: $main-shadow;
+      img {
+        object-fit: cover;
+        object-position: 50% 70%;
+        width: 100%;
+        height: 175px;
+        border-radius: 18px 18px 0 0;
+        @include media-queries-min-width($bkp-desktop) {
+          height: 250px;
+        }
+      }
+      figcaption {
         display: flex;
-        flex-flow: column wrap;
-        background-color: $white;
-        border-radius: 18px;
-        box-shadow: $main-shadow;
-        img {
-            object-fit: cover;
-            object-position: 50% 70%;
-            width: 100%;
-            height: 174px;
-            border-radius: 18px 18px 0 0;
-        }
-        figcaption {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 77px;
-            padding: 0 25px 0 15px;
-        }
+        justify-content: space-between;
+        align-items: center;
+        height: 77px;
+        padding: 0 25px 0 15px;
         p {
-            @include margin-top-bottom(0.3rem);
+          @include margin-top-bottom(0.3rem);
         }
+      }
     }
-    
+  }
 }

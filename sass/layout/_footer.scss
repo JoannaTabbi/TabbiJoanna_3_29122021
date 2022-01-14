@@ -1,36 +1,34 @@
 footer {
-    display: flex;
-    padding: 15px 20px 20px;
-    background-color: $bg-footer;
-    color: $white;
-    @include media-queries-min-width($bkp-tablet) {
-        justify-content: center;
+  display: flex;
+  padding: 15px 20px 20px;
+  background-color: $darkgrey;
+  color: $white;
+  nav {
+    display: flex;  
+    flex-direction: column;
+    @include media-queries-min-width($bkp-desktop-max) {
+      @include max-width($bkp-desktop-max);
+      padding-left: 20px;
     }
-    nav {
-        flex-direction: column;
-        @include major-sections-centered-layout;
-        @include media-queries-min-width($bkp-tablet) {
-            align-items: center;
-        }    
-        h3 {
-            font-family: $font-stack-headings;
-            @include margin-top-bottom(0.67rem);        
-        }
-        li {
-            @include margin-top-bottom(0.67rem);
-            &:last-child, &:nth-child(3) {
-              font-weight: 300;
-            }
-            @include media-queries-min-width($bkp-tablet) {
-                text-align: center;
-            }    
+    h3 {
+      font-family: $font-stack-headings;
+      @include margin-top-bottom(0.67rem);
+    }
+    ul {
+      li {
+        @include margin-top-bottom(0.67rem);
+        &:last-child,
+        &:nth-child(3) {
+          font-weight: 300;
         }
         a {
-             color: inherit;
-         }
-        i {
-             font-size: 0.8rem;
-             margin-right: 10px;
+          color: inherit;
+          i {
+            font-size: 0.8rem;
+            margin-right: 10px;
+          }
         }
+      }
     }
+  }
 }
