@@ -131,19 +131,6 @@ a {
   opacity: 0;
 }
 
-.new-sticker {
-  position: absolute;
-  top: 13px;
-  right: 11px;
-  z-index: 1;
-  padding: 10px 13px;
-  background-color: #99E2D0;
-  color: #278870;
-  border-radius: 2px;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
 header {
   display: flex;
   justify-content: center;
@@ -371,7 +358,19 @@ footer nav ul li a i {
   border-radius: 18px;
   box-shadow: 5px 5px 10px #dddddd;
 }
-#restaurants article figure img {
+#restaurants article figure > a span {
+  position: absolute;
+  top: 13px;
+  right: 11px;
+  z-index: 1;
+  padding: 10px 13px;
+  background-color: #99E2D0;
+  color: #278870;
+  border-radius: 2px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+#restaurants article figure > a img {
   object-fit: cover;
   object-position: 50% 70%;
   width: 100%;
@@ -379,7 +378,7 @@ footer nav ul li a i {
   border-radius: 18px 18px 0 0;
 }
 @media screen and (min-width: 992px) {
-  #restaurants article figure img {
+  #restaurants article figure > a img {
     height: 250px;
   }
 }
