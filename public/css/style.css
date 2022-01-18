@@ -1,0 +1,397 @@
+/* Set border-box as the global default */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #000;
+}
+
+h1, h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.7rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  color: #fff;
+  font-weight: 400;
+  padding: 0 20px;
+  border-radius: 25px;
+  box-shadow: 0 5px 5px #d0d0d0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: all 300ms 200ms ease-out;
+}
+@media screen and (min-width: 992px) {
+  .btn {
+    height: 60px;
+    font-size: 1.125rem;
+    border-radius: 30px;
+    padding: 0 30px;
+  }
+}
+.btn:hover {
+  opacity: 0.85;
+  box-shadow: 0 7px 7px #b6b6b6;
+}
+
+.heart {
+  font-size: 1.5rem;
+  color: #353535;
+}
+.heart--plein {
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  opacity: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+}
+@media screen and (min-width: 992px) {
+  header {
+    height: 100px;
+  }
+}
+header img {
+  width: 170px;
+  height: auto;
+}
+@media screen and (min-width: 992px) {
+  header img {
+    width: 200px;
+    height: auto;
+  }
+}
+
+footer {
+  display: flex;
+  padding: 15px 20px 20px;
+  background-color: #353535;
+  color: #fff;
+}
+footer nav {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1200px) {
+  footer nav {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+  }
+}
+footer nav h3 {
+  font-family: Shrikhand, "Cooper Black Italic", cursive;
+  margin-top: 0.67rem;
+  margin-bottom: 0.67rem;
+}
+footer nav ul li {
+  margin-top: 0.67rem;
+  margin-bottom: 0.67rem;
+}
+footer nav ul li:last-child, footer nav ul li:nth-child(3) {
+  font-weight: 300;
+}
+footer nav ul li a {
+  color: inherit;
+}
+footer nav ul li a i {
+  font-size: 0.8rem;
+  margin-right: 10px;
+}
+
+#find-us {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #eaeaea;
+  color: #353535;
+  box-shadow: inset 0 3px 3px #d1d1d1;
+}
+#find-us p {
+  font-weight: 500;
+}
+#find-us p i {
+  padding-right: 15px;
+}
+#find-us::after {
+  content: "";
+  width: 30px;
+}
+
+#about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #f6f6f6;
+  padding: 40px 0;
+}
+#about-us h1 {
+  width: 60%;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  #about-us h1 {
+    font-size: 1.5rem;
+  }
+}
+#about-us p {
+  width: 80%;
+  text-align: center;
+  color: #353535;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 992px) {
+  #about-us p {
+    font-size: 1.25rem;
+  }
+}
+
+#how-to {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px;
+}
+#how-to h2 {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+#how-to ol {
+  display: flex;
+  flex-flow: row wrap;
+  counter-reset: label-counter;
+}
+@media screen and (min-width: 768px) {
+  #how-to ol {
+    justify-content: center;
+    column-gap: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #how-to ol {
+    justify-content: space-between;
+  }
+}
+#how-to ol li {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  height: 72px;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 12px;
+  padding-right: 20px;
+  box-shadow: 5px 5px 10px #dddddd;
+  font-weight: 500;
+  counter-increment: label-counter;
+}
+@media screen and (min-width: 768px) {
+  #how-to ol li {
+    flex-basis: 45%;
+  }
+}
+@media screen and (min-width: 992px) {
+  #how-to ol li {
+    flex-basis: 30%;
+    font-size: 1.1rem;
+  }
+}
+#how-to ol li::before {
+  content: counter(label-counter);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  min-width: 25px;
+  background-color: #9356DC;
+  color: #fff;
+  border-radius: 50%;
+  margin-left: -12px;
+  font-size: 0.8rem;
+}
+#how-to ol li i {
+  color: #7e7e7e;
+  margin: 0 20px;
+  font-size: 1.125rem;
+}
+#how-to ol li:hover {
+  background-color: #f5edff;
+}
+#how-to ol li:hover i {
+  color: #9356DC;
+}
+
+#restaurants {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: #f6f6f6;
+}
+@media screen and (min-width: 1200px) {
+  #restaurants {
+    background-color: unset;
+    padding-top: unset;
+  }
+}
+#restaurants h2 {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#restaurants article {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  #restaurants article {
+    width: 48%;
+  }
+}
+#restaurants article figure {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 5px 5px 10px #dddddd;
+}
+#restaurants article figure > a span {
+  position: absolute;
+  top: 13px;
+  right: 11px;
+  z-index: 1;
+  padding: 10px 13px;
+  background-color: #99E2D0;
+  color: #278870;
+  border-radius: 2px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+#restaurants article figure > a img {
+  object-fit: cover;
+  object-position: 50% 70%;
+  width: 100%;
+  height: 175px;
+  border-radius: 18px 18px 0 0;
+}
+@media screen and (min-width: 992px) {
+  #restaurants article figure > a img {
+    height: 250px;
+  }
+}
+#restaurants article figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 77px;
+  padding: 0 25px 0 15px;
+}
+#restaurants article figure figcaption p {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+/*# sourceMappingURL=style.css.map */

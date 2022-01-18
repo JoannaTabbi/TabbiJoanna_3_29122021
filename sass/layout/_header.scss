@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  @include flex-center;
+  height: 65px;
+  @include media-queries-min-width($bkp-desktop) {
+      height: 100px;
+  }
+  img {
+    @include size(170px, auto);
+    @include media-queries-min-width($bkp-desktop) {
+        @include size(200px, auto)
+    }
+  }
+}
