@@ -4,9 +4,11 @@
 @import "./utils/extensions";
 
 @import "./base/base";
+@import "./base/reset";
 @import "./base/typography";
 
 @import "./components/buttons";
+@import "./components/hearts";
 
 @import "./layout/header";
 @import "./layout/footer";

@@ -1,0 +1,8 @@
+/* Set border-box as the global default */
+* {
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
