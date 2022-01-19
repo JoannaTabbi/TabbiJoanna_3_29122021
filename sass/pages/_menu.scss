@@ -1,8 +1,8 @@
 .menu-page {
   main {
     figure {
-      margin: 0 auto;
       width: 100%;
+      margin: 0 auto;
     }
 
     img {
@@ -14,10 +14,10 @@
 }
 #menu {
   @include max-width($bkp-tablet);
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   background-color: $lightgrey;
   margin-top: -35px;
   border-radius: 35px 35px 0 0;
@@ -31,8 +31,8 @@
   height: 100px;
   padding: 0 25px 0 20px;
   h1 {
-    font-size: 1.67rem;
     font-family: $font-stack-headings;
+    font-size: 1.67rem;
     font-weight: 500;
     margin: 0;
   }
@@ -43,10 +43,10 @@
   width: 100%;
   margin-bottom: 20px;
   h2 {
-    margin: 0 20px 15px;
-    text-transform: uppercase;
     font-size: 1rem;
     font-weight: 300;
+    text-transform: uppercase;
+    margin: 0 20px 15px;
     &::after {
       content: "";
       display: block;
@@ -63,42 +63,35 @@
     padding: 10px 0 10px 12px;
     box-shadow: $main-shadow;
     overflow-x: hidden;
-
-    h3 {
-      line-height: 1.5rem;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    p {
-      line-height: 1.5rem;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
+    div {
+      &:first-child {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        * {
+          line-height: 1.5rem;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+      &:last-child {
+        display: flex;
+        @include flex-center;
+        @include size(60px, 68px);
+        min-width: 60px;
+        background-color: $tertiary-color;
+        color: $white;
+        @include margin-top-bottom(-10px);
+        margin-right: -60px;
+        border-radius: 0 15px 15px 0;
+      }
     }
     span {
       align-self: flex-end;
       line-height: 1.5rem;
       font-weight: 700;
       padding: 0 25px 0 15px;
-    }
-    div {
-      &:first-child {
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-      }
-      &:last-child {
-        @include size(60px, 68px);
-        @include flex-center;
-        @include margin-top-bottom(-10px);
-        margin-right: -60px;
-        display: flex;
-        min-width: 60px;
-        border-radius: 0 15px 15px 0;
-        background-color: $tertiary-color;
-        color: $white;
-      }
     }
   }
 }

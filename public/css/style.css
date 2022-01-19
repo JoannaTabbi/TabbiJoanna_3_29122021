@@ -412,8 +412,8 @@ footer nav ul li a i {
 }
 
 .menu-page main figure {
-  margin: 0 auto;
   width: 100%;
+  margin: 0 auto;
 }
 .menu-page main img {
   width: 100%;
@@ -424,10 +424,10 @@ footer nav ul li a i {
 #menu {
   max-width: 768px;
   margin: 0 auto;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   background-color: #f6f6f6;
   margin-top: -35px;
   border-radius: 35px 35px 0 0;
@@ -443,8 +443,8 @@ footer nav ul li a i {
   padding: 0 25px 0 20px;
 }
 #menu-title h1 {
-  font-size: 1.67rem;
   font-family: Shrikhand, "Cooper Black Italic", cursive;
+  font-size: 1.67rem;
   font-weight: 500;
   margin: 0;
 }
@@ -456,10 +456,10 @@ footer nav ul li a i {
   margin-bottom: 20px;
 }
 .plate-list h2 {
-  margin: 0 20px 15px;
-  text-transform: uppercase;
   font-size: 1rem;
   font-weight: 300;
+  text-transform: uppercase;
+  margin: 0 20px 15px;
 }
 .plate-list h2::after {
   content: "";
@@ -478,42 +478,36 @@ footer nav ul li a i {
   box-shadow: 5px 5px 10px #dddddd;
   overflow-x: hidden;
 }
-.plate-list article h3 {
+.plate-list article div:first-child {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.plate-list article div:first-child * {
   line-height: 1.5rem;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.plate-list article p {
-  line-height: 1.5rem;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+.plate-list article div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 68px;
+  min-width: 60px;
+  background-color: #99E2D0;
+  color: #fff;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  margin-right: -60px;
+  border-radius: 0 15px 15px 0;
 }
 .plate-list article span {
   align-self: flex-end;
   line-height: 1.5rem;
   font-weight: 700;
   padding: 0 25px 0 15px;
-}
-.plate-list article div:first-child {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.plate-list article div:last-child {
-  width: 60px;
-  height: 68px;
-  justify-content: center;
-  align-items: center;
-  margin-top: -10px;
-  margin-bottom: -10px;
-  margin-right: -60px;
-  display: flex;
-  min-width: 60px;
-  border-radius: 0 15px 15px 0;
-  background-color: #99E2D0;
-  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
