@@ -4,8 +4,9 @@ footer {
   background-color: $darkgrey;
   color: $white;
   nav {
-    display: flex;  
+    display: flex;
     flex-direction: column;
+    width: 100%;
     @include media-queries-min-width($bkp-desktop-max) {
       @include max-width($bkp-desktop-max);
       padding-left: 20px;

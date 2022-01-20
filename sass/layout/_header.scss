@@ -1,14 +1,26 @@
 header {
   display: flex;
+  position: relative;
   @include flex-center;
   height: 65px;
   @include media-queries-min-width($bkp-desktop) {
-      height: 100px;
+    height: 100px;
   }
   img {
     @include size(170px, auto);
     @include media-queries-min-width($bkp-desktop) {
-        @include size(200px, auto)
+      @include size(200px, auto);
+    }
+  }
+  a {
+    position: absolute;
+    left: 0;
+    transform: translateX(150%);
+    i {
+      font-size: 1.2rem;
+      @include media-queries-min-width($bkp-desktop) {
+        font-size: 1.5rem;
+      }
     }
   }
 }

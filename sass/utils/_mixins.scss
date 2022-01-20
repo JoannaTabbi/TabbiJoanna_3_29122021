@@ -1,21 +1,21 @@
 @mixin max-width($width) {
-    width: $width;
-    margin: 0 auto;
+  max-width: $width;
+  margin: 0 auto;
 }
 @mixin size($width, $height: $width) {
-    width: $width;
-    height: $height;
+  width: $width;
+  height: $height;
 }
 @mixin margin-top-bottom($margin-top, $margin-bottom: $margin-top) {
-    margin-top: $margin-top;
-    margin-bottom: $margin-bottom;
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
 }
 @mixin flex-center {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 @mixin media-queries-min-width($device-width) {
-    @media screen and (min-width: $device-width) {
-        @content 
-      }
+  @media screen and (min-width: $device-width) {
+    @content;
+  }
 }
