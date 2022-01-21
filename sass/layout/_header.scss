@@ -3,6 +3,7 @@ header {
   position: relative;
   @include flex-center;
   height: 65px;
+  /* animation: dissapear 1s ease-out 2s reverse both; */
   @include media-queries-min-width($bkp-desktop) {
     height: 100px;
   }

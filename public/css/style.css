@@ -132,12 +132,91 @@ a {
   opacity: 0;
 }
 
+.loader-container {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+  width: 100%;
+  height: 100%;
+  font-family: Shrikhand;
+  font-size: 26px;
+  color: #99E2D0;
+  background-color: white;
+  padding: 0 20px;
+  animation: disappear 0.5s ease-out 1.5s forwards;
+}
+.loader-container .loading-spinner {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 10px solid rgba(147, 86, 220, 0.1);
+  border-radius: 50%;
+  border-top-color: #9356dc;
+  border-bottom-color: #9356dc;
+  animation: spin 1s linear infinite;
+}
+.loader-container .loading-spinner::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+  width: 50px;
+  height: 50px;
+  border: 10px solid rgba(255, 121, 218, 0.1);
+  border-top-color: #ff79da;
+  border-bottom-color: #ff79da;
+  transform: rotate(45deg);
+  animation: spin 0.7s linear infinite reverse;
+}
+.loader-container .loading-spinner::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 20px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  border: 10px solid rgba(153, 226, 208, 0.1);
+  border-top-color: #99e2d0;
+  border-bottom-color: #99e2d0;
+  transform: rotate(90deg);
+  animation: spin 1.8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disappear {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  99% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
 header {
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
   height: 65px;
+  /* animation: dissapear 1s ease-out 2s reverse both; */
 }
 @media screen and (min-width: 992px) {
   header {
@@ -420,9 +499,19 @@ footer nav ul li a i {
   height: 250px;
   object-fit: cover;
 }
+@media screen and (min-width: 992px) {
+  .menu-page main img {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-page main img {
+    height: 350px;
+  }
+}
 
 #menu {
-  max-width: 768px;
+  max-width: 992px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -432,6 +521,11 @@ footer nav ul li a i {
   margin-top: -35px;
   border-radius: 35px 35px 0 0;
   padding-bottom: 40px;
+}
+@media screen and (min-width: 992px) {
+  #menu {
+    margin-top: -90px;
+  }
 }
 
 #menu-title {
