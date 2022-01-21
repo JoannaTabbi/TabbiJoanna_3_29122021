@@ -9,11 +9,17 @@
       width: 100%;
       height: 250px;
       object-fit: cover;
+      @include media-queries-min-width($bkp-desktop) {
+          height: 300px;
+      }
+      @include media-queries-min-width($bkp-desktop-max) {
+          height: 350px;
+      }
     }
   }
 }
 #menu {
-  @include max-width($bkp-tablet);
+  @include max-width($bkp-desktop);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,6 +28,9 @@
   margin-top: -35px;
   border-radius: 35px 35px 0 0;
   padding-bottom: 40px;
+  @include media-queries-min-width($bkp-desktop){
+    margin-top: -90px;
+  }
 }
 #menu-title {
   display: flex;

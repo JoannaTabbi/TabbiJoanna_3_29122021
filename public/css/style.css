@@ -133,7 +133,7 @@ a {
 }
 
 .loader-container {
-  position: absolute;
+  position: fixed;
   z-index: 2;
   display: flex;
   flex-wrap: wrap;
@@ -147,7 +147,7 @@ a {
   color: #99E2D0;
   background-color: white;
   padding: 0 20px;
-  animation: disappear 0.5s ease-out 2.5s forwards;
+  animation: disappear 0.5s ease-out 1.5s forwards;
 }
 .loader-container .loading-spinner {
   position: relative;
@@ -499,9 +499,19 @@ footer nav ul li a i {
   height: 250px;
   object-fit: cover;
 }
+@media screen and (min-width: 992px) {
+  .menu-page main img {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-page main img {
+    height: 350px;
+  }
+}
 
 #menu {
-  max-width: 768px;
+  max-width: 992px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -511,6 +521,11 @@ footer nav ul li a i {
   margin-top: -35px;
   border-radius: 35px 35px 0 0;
   padding-bottom: 40px;
+}
+@media screen and (min-width: 992px) {
+  #menu {
+    margin-top: -90px;
+  }
 }
 
 #menu-title {
