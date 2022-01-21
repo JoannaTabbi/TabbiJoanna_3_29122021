@@ -2,7 +2,7 @@
   &__icon {
     font-size: 1.5rem;
     color: $darkgrey;
-    transition: opacity 0.3s ease-in-out;
+    transition: all 1s ease-in;
     @include media-queries-min-width($bkp-desktop) {
       font-size: 1.8rem;
     }
@@ -14,6 +14,8 @@
       -webkit-text-fill-color: transparent;
       -moz-text-fill-color: transparent;
       opacity: 0;
+      transform: scale(0);
+      transform-origin: center bottom;
     }
   }
   &:hover {
@@ -21,6 +23,7 @@
       opacity: 0;
       &--plein {
         opacity: 1;
+        transform: scale(1);
       }
     }
   }
