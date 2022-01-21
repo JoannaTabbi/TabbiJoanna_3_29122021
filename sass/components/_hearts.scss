@@ -1,13 +1,20 @@
 .heart {
   font-size: 1.5rem;
   color: $darkgrey;
+  @include media-queries-min-width($bkp-desktop) {
+    font-size: 1.8rem;
+  }
   &--plein {
-    background: linear-gradient($primary-color, $secondary-color);
+    background: linear-gradient(190deg, $primary-color, $secondary-color);
     background-size: 100%;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
