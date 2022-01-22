@@ -121,7 +121,6 @@ a {
 .heart__icon {
   font-size: 1.5rem;
   color: #353535;
-  transition: opacity 0.7s ease-in;
 }
 @media screen and (min-width: 992px) {
   .heart__icon {
@@ -135,15 +134,11 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  opacity: 0;
-  transform-origin: center bottom;
-}
-.heart:hover .heart__icon {
-  opacity: 0;
+  transform: scale(0);
 }
 .heart:hover .heart__icon--plein {
+  animation: heart-bound 1s ease-in forwards;
   opacity: 1;
-  animation: heart-bound 1s ease-in;
 }
 
 @keyframes heart-bound {
@@ -154,10 +149,10 @@ a {
     transform: scale(1);
   }
   85% {
-    transform: scale(1.1);
+    transform: scale(1.15);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1.1);
   }
 }
 .loader-container {

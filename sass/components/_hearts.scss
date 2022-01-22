@@ -2,7 +2,6 @@
   &__icon {
     font-size: 1.5rem;
     color: $darkgrey;
-    transition: opacity 0.7s ease-in;
     @include media-queries-min-width($bkp-desktop) {
       font-size: 1.8rem;
     }
@@ -13,24 +12,22 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       -moz-text-fill-color: transparent;
-      opacity: 0;
-      transform-origin: center bottom;
+      transform: scale(0);
+      
     }
   }
   &:hover {
     .heart__icon {
-      opacity: 0;
       &--plein {
+        animation: heart-bound 1s ease-in forwards;
         opacity: 1;
-        animation: heart-bound 1s ease-in;
-        
       }
     }
   }
 }
 @keyframes heart-bound {
-0% {transform: scale(0)}
-70% {transform: scale(1)}
-85% {transform: scale(1.1)}
-100% {transform: scale(1)}
+0% {transform: scale(0);}
+70% {transform: scale(1);}
+85% {transform: scale(1.15);}
+100% {transform: scale(1.1);}
 }
