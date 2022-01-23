@@ -137,8 +137,7 @@ a {
   transform: scale(0);
 }
 .heart:hover .heart__icon--plein {
-  animation: heart-bound 1s ease-in forwards;
-  opacity: 1;
+  animation: heart-bound 1s 0.1s ease-in forwards;
 }
 
 @keyframes heart-bound {
