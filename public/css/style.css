@@ -118,20 +118,42 @@ a {
   box-shadow: 0 7px 7px #aaaaaa;
 }
 
-.heart {
+.heart__icon {
   font-size: 1.5rem;
   color: #353535;
 }
-.heart--plein {
-  background: linear-gradient(#9356DC, #FF79DA);
+@media screen and (min-width: 992px) {
+  .heart__icon {
+    font-size: 1.8rem;
+  }
+}
+.heart__icon--plein {
+  background: linear-gradient(190deg, #9356DC, #FF79DA);
   background-size: 100%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  opacity: 0;
+  transform: scale(0);
+}
+.heart:hover .heart__icon--plein {
+  animation: heart-bound 1s 0.1s ease-in forwards;
 }
 
+@keyframes heart-bound {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1);
+  }
+  85% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
 .loader-container {
   position: fixed;
   z-index: 2;
