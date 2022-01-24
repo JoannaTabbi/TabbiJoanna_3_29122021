@@ -10,10 +10,10 @@
       height: 250px;
       object-fit: cover;
       @include media-queries-min-width($bkp-desktop) {
-          height: 300px;
+        height: 300px;
       }
       @include media-queries-min-width($bkp-desktop-max) {
-          height: 350px;
+        height: 350px;
       }
     }
   }
@@ -28,7 +28,7 @@
   margin-top: -35px;
   border-radius: 35px 35px 0 0;
   padding-bottom: 40px;
-  @include media-queries-min-width($bkp-desktop){
+  @include media-queries-min-width($bkp-desktop) {
     margin-top: -90px;
   }
 }
@@ -72,6 +72,12 @@
     padding: 10px 0 10px 12px;
     box-shadow: $main-shadow;
     overflow-x: hidden;
+    animation: lazy-loading 1s ease-out both;
+    @for $child-nb from 2 through 4 {
+      &:nth-child(#{$child-nb}) {
+        animation-delay: 0.3s * $child-nb;
+      }
+    }
     div {
       &:first-child {
         width: 100%;
@@ -102,5 +108,15 @@
       font-weight: 700;
       padding: 0 25px 0 15px;
     }
+  }
+}
+@keyframes lazy-loading {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
