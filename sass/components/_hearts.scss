@@ -1,3 +1,5 @@
+// hearts are stacked with fontawesome rule fa-stack, the colored heart beneath the empty one.
+
 .heart {
   &__icon {
     font-size: 1.5rem;
@@ -21,19 +23,5 @@
         animation: heart-bound 1s 0.1s ease-in forwards;
       }
     }
-  }
-}
-@keyframes heart-bound {
-  0% {
-    transform: scale(0);
-  }
-  70% {
-    transform: scale(1);
-  }
-  85% {
-    transform: scale(1.15);
-  }
-  100% {
-    transform: scale(1.1);
   }
 }
