@@ -50,41 +50,74 @@
         }
 
         // MENU PLATE-LIST SECTIONS
+        &:nth-last-of-type(-n + 3) {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          margin-bottom: 20px;
+          h2 {
+            font-size: 1rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin: 0 20px 15px;
+            &::after {
+              content: "";
+              display: block;
+              @include size(40px, 3px);
+              background-color: $tertiary-color;
+            }
+          }
+
+          // MENU PLATES
+
+          article {
+            display: flex;
+            align-items: center;
+            background-color: $white;
+            border-radius: 15px;
+            margin: 0 15px 15px;
+            padding: 10px 0 10px 12px;
+            box-shadow: $main-shadow;
+            overflow-x: hidden;
+            animation: lazy-loading 1s ease-out both;
+            div {
+              &:first-child {
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                * {
+                  line-height: 1.5rem;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  white-space: nowrap;
+                }
+              }
+              &:last-child {
+                display: flex;
+                @include flex-center;
+                @include size(60px, 68px);
+                min-width: 60px;
+                background-color: $tertiary-color;
+                color: $white;
+                @include margin-top-bottom(-10px);
+                margin-right: -60px;
+                border-radius: 0 15px 15px 0;
+              }
+            }
+            span {
+              align-self: flex-end;
+              line-height: 1.5rem;
+              font-weight: 700;
+              padding: 0 25px 0 15px;
+            }
+          }
+        }
+
+        // iteration for delaying plates loading
 
         @for $parent-nb from 2 through 4 {
           &:nth-child(#{$parent-nb}) {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            margin-bottom: 20px;
-            h2 {
-              font-size: 1rem;
-              font-weight: 300;
-              text-transform: uppercase;
-              margin: 0 20px 15px;
-              &::after {
-                content: "";
-                display: block;
-                @include size(40px, 3px);
-                background-color: $tertiary-color;
-              }
-            }
-
-            // MENU PLATES
-
             article {
-              display: flex;
-              align-items: center;
-              background-color: $white;
-              border-radius: 15px;
-              margin: 0 15px 15px;
-              padding: 10px 0 10px 12px;
-              box-shadow: $main-shadow;
-              overflow-x: hidden;
-              animation: lazy-loading 1s ease-out both;
-
-              // iteration for delaying plates loading
-
               @for $child-nb from 1 through 3 {
                 &:nth-of-type(#{$child-nb}) {
                   animation-delay: $lazy-load-anim-del *
@@ -93,36 +126,6 @@
                     $lazy-load-anim-del *
                     ($parent-nb - 2);
                 }
-              }
-              div {
-                &:first-child {
-                  width: 100%;
-                  overflow: hidden;
-                  white-space: nowrap;
-                  * {
-                    line-height: 1.5rem;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;
-                  }
-                }
-                &:last-child {
-                  display: flex;
-                  @include flex-center;
-                  @include size(60px, 68px);
-                  min-width: 60px;
-                  background-color: $tertiary-color;
-                  color: $white;
-                  @include margin-top-bottom(-10px);
-                  margin-right: -60px;
-                  border-radius: 0 15px 15px 0;
-                }
-              }
-              span {
-                align-self: flex-end;
-                line-height: 1.5rem;
-                font-weight: 700;
-                padding: 0 25px 0 15px;
               }
             }
           }
