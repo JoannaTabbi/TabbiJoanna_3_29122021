@@ -140,7 +140,7 @@
                     -100%
                   ); // check box appears sliding to left
                   i {
-                    animation: check-rotate $check-dur $check-tim-fun; // full rotation of the check icon
+                    animation: check-rotate $check-dur $check-tim-fun; // three-quarter visible turn of the check icon
                   }
                 }
               }

@@ -187,8 +187,11 @@ a {
   }
 }
 @keyframes check-rotate {
-  0%, 33% {
+  0% {
     transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(90deg);
   }
   100% {
     transform: rotate(360deg);
