@@ -92,6 +92,8 @@
                 width: 100%;
                 overflow: hidden;
                 white-space: nowrap;
+                margin-right: 0;
+                transition: margin-right $check-dur $check-tim-fun;
                 * {
                   line-height: 1.5rem;
                   text-overflow: ellipsis;
@@ -99,26 +101,54 @@
                   white-space: nowrap;
                 }
               }
-              // div containing the price
+              // div containing the check icon
 
               &:last-child {
                 display: flex;
                 @include flex-center;
-                @include size(60px, 68px);
-                min-width: 60px;
+                @include size($check-width, 68px);
+                min-width: $check-width;
                 background-color: $tertiary-color;
                 color: $white;
                 @include margin-top-bottom(-10px);
-                margin-right: -60px;
+                margin-right: -$check-width;
                 border-radius: 0 15px 15px 0;
+                transform: translateX(0);
+                transition: transform $check-dur $check-tim-fun;
+                i {
+                  font-size: 1.3rem;
+                }
               }
             }
-            // element containing check icon
+            // element containing the price
             span {
               align-self: flex-end;
               line-height: 1.5rem;
               font-weight: 700;
               padding: 0 25px 0 15px;
+              transform: translateX(0);
+              transition: transform $check-dur $check-tim-fun;
+            }
+            // check transition / animation when you mouse over the plate
+            &:hover {
+              div {
+                &:first-child {
+                  margin-right: $check-width; // the plat's name and description shrink
+                }
+                &:last-child {
+                  transform: translateX(
+                    -100%
+                  ); // check box appears sliding to left
+                  i {
+                    animation: check-rotate $check-dur $check-tim-fun; // three-quarter visible turn of the check icon
+                  }
+                }
+              }
+              span {
+                transform: translateX(
+                  -$check-width
+                ); // the price is "pushed" to the left
+              }
             }
           }
         }
