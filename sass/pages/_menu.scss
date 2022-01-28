@@ -9,6 +9,7 @@
         width: 100%;
         height: 250px;
         object-fit: cover;
+        object-position: 50% 60%;
         @include media-queries-min-width($bkp-desktop) {
           height: 300px;
         }
@@ -158,7 +159,7 @@
         @for $parent-nb from 2 through 4 {
           &:nth-child(#{$parent-nb}) {
             article {
-              @for $child-nb from 1 through 3 {
+              @for $child-nb from 1 through 4 {
                 &:nth-of-type(#{$child-nb}) {
                   animation-delay: $lazy-load-anim-del *
                     $child-nb +
