@@ -6,15 +6,16 @@ This project, which forms part of the Openclassrooms course for web development,
 
 ## REQUIREMENTS
 
-Install node.js, version: 16.13.2 LTS or later, make sure that *npm packager manager* and *Add to PATH* are checked. If you work on VS Code editor, you can install Live Sass Compiler extension instead.
+Install node.js, version: 16.13.2 LTS or later.
 
 ## INSTALLATION
 
-Clone my GitHub repository [here](https://github.com/JoannaTabbi/TabbiJoanna_3_29122021), then open the folder in your code editor. Run npm install in your terminal.
+Clone my GitHub repository [here](https://github.com/JoannaTabbi/TabbiJoanna_3_29122021), then open the folder in your code editor.
+Install sass globally: npm -g install sass.
 
 ## USE
 
-Use *npm run sass* command before you start coding: sass will watch and automatically compile any changes to *style.css*. Press Ctrl+C to stop. 
+Use *npm run sass* command before you start coding: sass will watch and automatically compile any changes to *style.css*. 
 
 or
 
