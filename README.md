@@ -6,7 +6,7 @@ This project, which forms part of the Openclassrooms course for web development,
 
 ## REQUIREMENTS
 
-Install node.js, version: 16.13.2 LTS or later.
+Install node.js, version: 16.13.1 LTS or later.
 
 ## INSTALLATION
 
